@@ -2,11 +2,6 @@ import { useRef } from 'react';
 import { styled } from '@stitches/react';
 import useOnScreen from '../hooks/useOnScreen';
 import { ConfigsType } from '../configs';
-import { useLocation } from "react-router-dom"
-const location = useLocation()
-const params = new URLSearchParams(location.search)
-console.log(params.get('invite'))
-
 
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
