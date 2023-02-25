@@ -7,7 +7,6 @@ import { Layout } from 'antd';
 import Family from './components/Family';
 import Confirmation from './components/Confirmation';
 import {Route } from 'react-router-dom';
-const { Footer } = Layout;
 
 function App() {
   return (

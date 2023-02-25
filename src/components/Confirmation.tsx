@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { styled } from '@stitches/react';
 import useOnScreen from '../hooks/useOnScreen';
 import { ConfigsType } from '../configs';
-
+import queryString from 'query-string';
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Layout = styled('div', {
@@ -41,7 +41,15 @@ type GreetingProps = {
   config: ConfigsType;
 };
 
+let index: { value: null | number } = {
+  value :  1
+};
 
+const json = queryString.parse(window.location.search);
+index.value =  parseInt(json.foo as string);
+
+
+console.log(index.value);
 
 const Confirmation = ({ config }: GreetingProps) => {
   const ref = useRef<HTMLSelectElement>(null);
@@ -60,7 +68,7 @@ const Confirmation = ({ config }: GreetingProps) => {
       <Layout>
         <Title>Apreciable:</Title>
         <SubTitle>
-          {config.invite[1]}
+          {config.invite[index.value || 1]}
           <br />
         </SubTitle>
       </Layout>
