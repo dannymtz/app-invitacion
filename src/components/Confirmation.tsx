@@ -51,7 +51,7 @@ index.value =  parseInt(json.foo as string);
 
 console.log(index.value);
 
-const Confirmation = ({ config }: GreetingProps) => {
+const Confirmation = ({ config }: GreetingProps) => { 
   const ref = useRef<HTMLSelectElement>(null);
   const onScreen: boolean = useOnScreen<HTMLDivElement>(ref, '-125px');
   return (
@@ -68,9 +68,11 @@ const Confirmation = ({ config }: GreetingProps) => {
       <Layout>
         <Title>Apreciable:</Title>
         <SubTitle>
-          {config.invite[index.value || 1]}
+          {config.invite[index.value || 1].familyName}
           <br />
+          {config.invite[index.value || 1].numberInvite}
         </SubTitle>
+        
       </Layout>
     </section>
   );

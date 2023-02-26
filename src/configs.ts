@@ -7,7 +7,10 @@ import GalleryPhoto4 from './resources/Gallery_Photo_4.png';
 import GalleryPhoto5 from './resources/Gallery_Photo_5.png';
 import GalleryPhoto6 from './resources/Gallery_Photo_6.png';
 
-
+const fma: Invete = {
+  familyName: "Pascual Leonides",
+  numberInvite :1
+}
 
 const Configs: ConfigsType = {
   url: 'http://localhost:3000', 
@@ -35,13 +38,14 @@ const Configs: ConfigsType = {
     GalleryPhoto6,
   ],
   invite: [
-    'Familia Garcia Gayoso',
-    'Maria del Carmen Pascual',
-    'Familia Blanco',
-    'Kenneth y Novia',
-    'Mauricio y Novia',
-    'Diego Guerrero',
-    'Maria Luisa Pascual'
+     {
+      familyName: "Pascual Leonides",
+      numberInvite :1
+    },
+    {
+      familyName: "Pascual Leonides",
+      numberInvite :2
+    }
   ],
 };
 
@@ -56,8 +60,13 @@ export type ConfigsType = {
   locationMapImage: string;
   galleryImages: string[];
   index?: number;
-  invite : string[];
+  invite : Invete[];
 };
+
+type Invete = {
+  familyName? : string;
+  numberInvite? : number;
+}
 
 type Person = {
   name: string;
