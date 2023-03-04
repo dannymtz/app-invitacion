@@ -1,5 +1,8 @@
 import { styled } from "@stitches/react";
 import { memo, useEffect, useState } from "react";
+import { useRef } from 'react';
+import useOnScreen from '../hooks/useOnScreen';
+
 
 const EVENT_DATE = "Mayo 27, 2023 04:30:00";
 const COUNTDOWN_DATE = new Date(EVENT_DATE).getTime();
@@ -12,22 +15,34 @@ interface COUNTDOWNTYPE {
 }
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
+const Box =  styled('div', {
+  width: '100%',
+  color: '#5D4037',
+  textAlign: 'center',
+  justifyContent: "center",
+  borderRadius:"1em",
+  margin: '3.5%',
+  background: '#FDFEFE'
+});
+
 const Layout = styled('div', {
   width: '100%',
   color: '#5D4037',
   textAlign: 'center',
   marginTop: '3.5%',
   animation: 'fadein 2.5s',
+  background: '#EBF5FB'
 });
 
 const SubTitle = styled('p', {
-    color: '#795548',
-    width: '100%',
-    fontSize: isPortrait ? '1.2em' : '2em',
-    margin: '24px 0',
-    fontWeight: '300',
-    lineHeight: 1.8,
+  color: '#795548',
+  width: '100%',
+  fontSize: isPortrait ? '1.2em' : '2em',
+  margin: '24px 0',
+  fontWeight: '300',
+  lineHeight: 1.8,
   });
+
   const Watch = styled('p', {
     color: '#795548',
     width: '100%',
@@ -35,7 +50,17 @@ const SubTitle = styled('p', {
     margin: '24px 0',
     fontWeight: '300',
     lineHeight: 1.8,
+    display: 'flex',
+    justifyContent:'center'
   }); 
+
+  const Section = styled('section', {
+    height: '70%',
+    background: '#EBF5FB',
+    overflow: 'hidden',
+    position: 'relative',
+  });
+  
 
 const countdownBase: COUNTDOWNTYPE = {
   days: 0,
@@ -45,6 +70,8 @@ const countdownBase: COUNTDOWNTYPE = {
 };
 
 const Countdown = memo(() => {
+  const ref = useRef<HTMLSelectElement>(null);
+  const onScreen: boolean = useOnScreen<HTMLDivElement>(ref, '-125px');
   const [countdown, setCountdown] = useState<COUNTDOWNTYPE>(countdownBase);
 
   useEffect(() => {
@@ -70,19 +97,32 @@ const Countdown = memo(() => {
   }, []);
 
   return (
-    <Layout>
-      <SubTitle>
-        <h4>Cuenta regresiva</h4>
-        <h4>Nuestra Boda</h4>
-      </SubTitle>
-
-      <Watch>
-        <NumberCard number={countdown.days} label="Dias" />
-        <NumberCard number={countdown.hours} label="Horas" />
-        <NumberCard number={countdown.minutes} label="Minutos" />
-        <NumberCard number={countdown.seconds} label="Segundos" />
-      </Watch>
-    </Layout>
+    <section ref={ref}
+    style={{
+      height: '100$',
+      background: onScreen ? '#EFEBE9' : '#DADADA',
+      overflow: 'hidden',
+      position: 'relative',
+      transition: 'background 1s ease-in',
+    }}>
+        <Section>
+        <Layout>
+          <SubTitle>
+            Cuenta regresiva
+            <br/>
+            Nuestra Boda
+          </SubTitle>
+          <Watch>
+            <NumberCard number={countdown.days} label="Dias" />
+            <NumberCard number={countdown.hours} label="Horas" />
+            <NumberCard number={countdown.minutes} label="Minutos" />
+            <NumberCard number={countdown.seconds} label="Segundos" />
+          </Watch>
+        </Layout>
+      </Section>
+    </section>
+    
+    
   );
 });
 
@@ -93,12 +133,11 @@ interface NumberCardProps {
 
 const NumberCard = memo(({ number, label }: NumberCardProps) => {
   const numberString = number < 100 ? ("0" + number).slice(-2) : String(number);
-
   return (
-    <div className="rounded-lg bg-[#EFEFEF] py-7 px-2 w-24 text-center mx-2 text-gray-700 font-sans">
-      <div className="text-3xl mb-2">{numberString}</div>
+    <Box>
+      <div>{numberString}</div>
       <div>{label}</div>
-    </div>
+    </Box>
   );
 });
 

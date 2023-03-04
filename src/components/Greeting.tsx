@@ -6,8 +6,8 @@ import { ConfigsType } from '../configs';
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
-  height: '100%',
-  background: '#DADADA',
+  height: 'fit-content',
+  background: '#F4F6F6',
   overflow: 'hidden',
   position: 'relative',
 });
@@ -22,21 +22,6 @@ const Layout = styled('div', {
 
 const Image = styled('img', {
   width: isPortrait ? '100%' : '40%',
-});
-const ImageLayout = styled('div', {
-  width: '100%',
-  background: '#DADADA',
-  bottom: '-5px',
-  textAlign: 'center',
-  position: 'absolute',
-});
-
-const Title = styled('p', {
-  color: '#795548',
-  width: '100%',
-  fontSize: isPortrait ? '2.5em' : '3.5em',
-  margin: 0,
-  fontWeight: '500',
 });
 
 const SubTitle = styled('p', {

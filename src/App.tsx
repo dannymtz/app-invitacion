@@ -3,9 +3,9 @@ import TitleLayout from './components//Title';
 import Location from './components//Location';
 import Countdown from './components/Countdown';
 import Configs from './configs';
-import { Layout } from 'antd';
 import Family from './components/Family';
 import Confirmation from './components/Confirmation';
+import Regalos from './components/Regalos';
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
       <Location config={Configs} />
       <Countdown/>
       <Confirmation config={Configs}/>
+      <Regalos/>
     </main>
   );
 }
