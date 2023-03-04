@@ -1,6 +1,8 @@
 import { useRef } from 'react';
 import { styled } from '@stitches/react';
 import { ConfigsType } from '../configs';
+import { Loader } from '@googlemaps/js-api-loader';
+import GoogleMapReact from 'google-map-react';
 
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
@@ -35,13 +37,18 @@ const SubTitle = styled('p', {
   lineHeight: 1.8,
 });
 
+
+const Mapa = styled('div', {
+    height: '400px',
+    alignContent: 'space-around'
+});
+
 type LocationProps = {
   config: ConfigsType;
 };
 
 const Location = ({ config }: LocationProps) => {
   const ref = useRef<HTMLSelectElement>(null);
-
   return (
     <Section ref={ref}>
       <Layout>
@@ -58,12 +65,12 @@ const Location = ({ config }: LocationProps) => {
           <br />
           01090 Ciudad de México, CDMX
           <br/>
-          <iframe
+          <Mapa>
+            <iframe  
             style={{ width: isPortrait ? '100%' : '80%',
-          
-            height: '100%' }}
-            src={config.locationMapImage}
-          />
+          height: '100%' }}
+           src={config.locationMapImage}/>
+          </Mapa>
           <br/>
           Código de vestimenta
           <br/>
