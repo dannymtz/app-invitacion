@@ -1,12 +1,10 @@
 import TitleImage from './resources/Title.jpeg';
-import LocationMapImage from './resources/LocationMap.png';
 import GalleryPhoto1 from './resources/Gallery_Photo_1.jpeg';
 import GalleryPhoto2 from './resources/Gallery_Photo_2.png';
 import GalleryPhoto3 from './resources/Gallery_Photo_3.png';
 import GalleryPhoto4 from './resources/Gallery_Photo_4.png';
 import GalleryPhoto5 from './resources/Gallery_Photo_5.png';
 import GalleryPhoto6 from './resources/Gallery_Photo_6.png';
-import { randomInt, randomUUID } from 'crypto';
 
 
 const Configs: ConfigsType = {

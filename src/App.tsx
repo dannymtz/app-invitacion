@@ -6,7 +6,6 @@ import Configs from './configs';
 import { Layout } from 'antd';
 import Family from './components/Family';
 import Confirmation from './components/Confirmation';
-import {Route } from 'react-router-dom';
 
 function App() {
   return (
