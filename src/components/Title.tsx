@@ -67,13 +67,10 @@ const Title = ({ config }: TitleProps) => {
       <Section>
         <Layout>
           <TitleLayout>
+          ¡Nos casamos!
+          <br/>
             {config.groom.name} &amp; {config.bride.name}
           </TitleLayout>
-          <SubTitleLayout>
-            {config.weddingDate}
-            <br />
-            {config.weddingLocation}
-          </SubTitleLayout>
         </Layout>
         <ImageLayout>
           <Image src={config.titleImage} alt="Wedding Invitation Title Picutre" />

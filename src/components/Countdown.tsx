@@ -13,9 +13,12 @@ interface COUNTDOWNTYPE {
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Layout = styled('div', {
-    width: '100%',
-    padding: isPortrait ? '30% 0% 15% 5%' : '5% 0% 5% 10%',
-  });
+  width: '100%',
+  color: '#5D4037',
+  textAlign: 'center',
+  marginTop: '3.5%',
+  animation: 'fadein 2.5s',
+});
 
 const SubTitle = styled('p', {
     color: '#795548',

@@ -5,13 +5,24 @@ import { ConfigsType } from '../configs';
 import queryString from 'query-string';
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
+const Section = styled('section', {
+  height: '100%',
+  background: '#DADADA',
+  overflow: 'hidden',
+  position: 'relative',
+});
+
 const Layout = styled('div', {
   width: '100%',
-  padding: isPortrait ? '30% 0% 15% 5%' : '5% 0% 5% 10%',
+  color: '#5D4037',
+  textAlign: 'center',
+  marginTop: '3.5%',
+  animation: 'fadein 2.5s',
 });
 const Image = styled('img', {
   width: isPortrait ? '100%' : '40%',
 });
+
 const ImageLayout = styled('div', {
   width: '100%',
   background: '#DADADA',
@@ -27,6 +38,8 @@ const Title = styled('p', {
   margin: 0,
   fontWeight: '500',
 });
+
+
 
 const SubTitle = styled('p', {
   color: '#795548',
@@ -46,7 +59,7 @@ let index: { value: null | number } = {
 };
 
 const json = queryString.parse(window.location.search);
-index.value =  parseInt(json.foo as string);
+index.value =  parseInt(json.invite as string);
 
 
 console.log(index.value);
@@ -65,15 +78,14 @@ const Confirmation = ({ config }: GreetingProps) => {
         transition: 'background 1s ease-in',
       }}
     >
-      <Layout>
-        <Title>Apreciable:</Title>
-        <SubTitle>
-          {config.invite[index.value || 1].familyName}
-          <br />
-          {config.invite[index.value || 1].numberInvite}
-        </SubTitle>
-        
-      </Layout>
+      <Section>
+        <Layout>
+          <Title>{config.invite.find(e => e.id == index.value)?.familyName}</Title>
+          <SubTitle>
+            Número de pases: {config.invite.find(e => e.id == index.value)?.numberInvite}
+          </SubTitle>
+        </Layout>
+      </Section>
     </section>
   );
 };

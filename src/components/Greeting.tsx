@@ -5,10 +5,21 @@ import { ConfigsType } from '../configs';
 
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
+const Section = styled('section', {
+  height: '100%',
+  background: '#DADADA',
+  overflow: 'hidden',
+  position: 'relative',
+});
+
 const Layout = styled('div', {
   width: '100%',
-  padding: isPortrait ? '30% 0% 15% 5%' : '5% 0% 5% 10%',
+  color: '#5D4037',
+  textAlign: 'center',
+  marginTop: '3.5%',
+  animation: 'fadein 2.5s',
 });
+
 const Image = styled('img', {
   width: isPortrait ? '100%' : '40%',
 });
@@ -56,14 +67,20 @@ const Greeting = ({ config }: GreetingProps) => {
         transition: 'background 1s ease-in',
       }}
     >
-      <Layout>
-        <Title>¡Nos casamos!</Title>
-        <SubTitle>
-          Te invitamos a celebrar nuestra boda
-          <br />
-        </SubTitle>
-        <Image src={config.secondImage} />
-      </Layout>
+      <Section>
+        <Layout>
+          <SubTitle>
+            Te invitamos a celebrar nuestra boda
+            <br />
+          </SubTitle>
+          <SubTitle>            
+            {config.weddingDate}
+            <br />
+            {config.weddingLocation}
+          </SubTitle>
+          <Image src={config.secondImage} />
+        </Layout>
+      </Section>
     </section>
   );
 };

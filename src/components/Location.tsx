@@ -12,7 +12,10 @@ const Section = styled('section', {
 
 const Layout = styled('div', {
   width: '100%',
-  padding: isPortrait ? '20% 0% 15% 5%' : '5% 0% 5% 10%',
+  color: '#5D4037',
+  textAlign: 'center',
+  marginTop: '3.5%',
+  animation: 'fadein 2.5s',
 });
 
 const Title = styled('p', {
@@ -57,7 +60,8 @@ const Location = ({ config }: LocationProps) => {
           <br/>
           <iframe
             style={{ width: isPortrait ? '100%' : '80%',
-            height: '200%' }}
+          
+            height: '100%' }}
             src={config.locationMapImage}
           />
           <br/>

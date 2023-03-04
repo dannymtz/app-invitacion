@@ -6,11 +6,8 @@ import GalleryPhoto3 from './resources/Gallery_Photo_3.png';
 import GalleryPhoto4 from './resources/Gallery_Photo_4.png';
 import GalleryPhoto5 from './resources/Gallery_Photo_5.png';
 import GalleryPhoto6 from './resources/Gallery_Photo_6.png';
+import { randomInt, randomUUID } from 'crypto';
 
-const fma: Invete = {
-  familyName: "Pascual Leonides",
-  numberInvite :1
-}
 
 const Configs: ConfigsType = {
   url: 'http://localhost:3000', 
@@ -39,12 +36,69 @@ const Configs: ConfigsType = {
   ],
   invite: [
      {
-      familyName: "Pascual Leonides",
-      numberInvite :1
+      familyName: "María del Carmen Pascual Leonides",
+      numberInvite :1,
+      id: 8413464523
     },
     {
-      familyName: "Pascual Leonides",
-      numberInvite :2
+      familyName: "María Luisa Pascual Leonides",
+      numberInvite :1,
+      id: 5737665243      
+    },
+    {
+      familyName: "Familia Blanco Gutierrez",
+      numberInvite :2,
+      id: 7820230051
+    },
+    {
+      familyName: "Diego Guerrero",
+      numberInvite :1,
+      id: 4648327456      
+    },
+    {
+      familyName: "Alejandro Sánchez",
+      numberInvite :2,
+      id: 1229194065
+    },
+    {
+      familyName: "Mauricio Salazar",
+      numberInvite :2,
+      id: 9913896522      
+    },
+    {
+      familyName: "Kenneth Rosas",
+      numberInvite :2,
+      id: 3460415415
+    },
+    {
+      familyName: "Familia García Gayosso",
+      numberInvite :4,
+      id: 8597998709      
+    },
+    {
+      familyName: "Familia Victoria García",
+      numberInvite :4,
+      id: 4165161219      
+    },
+    {
+      familyName: "Garcia Gonzáles",
+      numberInvite :2,
+      id: 6367529898
+    },
+    {
+      familyName: "Familia López Huerta",
+      numberInvite :2,
+      id: 9832149086      
+    },
+    {
+      familyName: "Karla Herrera",
+      numberInvite :2,
+      id: 7189474670
+    },
+    {
+      familyName: "Mauricio Sánchez",
+      numberInvite :2,
+      id: 6407310983      
     }
   ],
 };
@@ -66,6 +120,7 @@ export type ConfigsType = {
 type Invete = {
   familyName? : string;
   numberInvite? : number;
+  id?: number;
 }
 
 type Person = {
