@@ -1,13 +1,11 @@
 import { useRef } from 'react';
 import { styled } from '@stitches/react';
 import { ConfigsType } from '../configs';
-import { Loader } from '@googlemaps/js-api-loader';
-import GoogleMapReact from 'google-map-react';
 
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
-  background: '#EFEBE9',
+  background: '#EBF5FB',
   overflow: 'hidden',
   position: 'relative',
 });
