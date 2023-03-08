@@ -7,7 +7,7 @@ import GoogleMapReact from 'google-map-react';
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
-  background: '#EFEBE9',
+  background: '#EBF5FB',
   overflow: 'hidden',
   position: 'relative',
 });

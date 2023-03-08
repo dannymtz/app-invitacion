@@ -3,6 +3,7 @@ import { styled } from '@stitches/react';
 import useOnScreen from '../hooks/useOnScreen';
 import { ConfigsType } from '../configs';
 import queryString from 'query-string';
+
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
@@ -10,6 +11,8 @@ const Section = styled('section', {
   background: '#DADADA',
   overflow: 'hidden',
   position: 'relative',
+  display: 'grid',
+  justifyContent: 'center'
 });
 
 const Layout = styled('div', {
@@ -39,7 +42,18 @@ const Title = styled('p', {
   fontWeight: '500',
 });
 
-
+const Button =  styled('button', {
+  position:'relative',
+  backgroundColor: 'Green',
+  cursor: 'pointer',
+  width: '400px',
+  height: '100px',
+  color: 'White',
+  lineHeight: '100px',
+  textAlign: 'center',
+  borderRadius:"1em",
+  fontSize: '2em'
+});
 
 const SubTitle = styled('p', {
   color: '#795548',
@@ -67,6 +81,10 @@ console.log(index.value);
 const Confirmation = ({ config }: GreetingProps) => { 
   const ref = useRef<HTMLSelectElement>(null);
   const onScreen: boolean = useOnScreen<HTMLDivElement>(ref, '-125px');
+  function confirm() {
+    window.open(
+      "https://wa.me/+525549164152?text=Confirmo%20mi%20asistencia", "_blank");
+  }
   return (
     <section
       ref={ref}
@@ -85,6 +103,9 @@ const Confirmation = ({ config }: GreetingProps) => {
             Número de pases: {config.invite.find(e => e.id == index.value)?.numberInvite}
           </SubTitle>
         </Layout>
+        <Button onClick={confirm} >
+          Confirmar
+        </Button>
       </Section>
     </section>
   );

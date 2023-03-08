@@ -31,7 +31,7 @@ const Layout = styled('div', {
   textAlign: 'center',
   marginTop: '3.5%',
   animation: 'fadein 2.5s',
-  background: '#EBF5FB'
+  background: '#EFEBE9'
 });
 
 const SubTitle = styled('p', {
@@ -56,11 +56,14 @@ const SubTitle = styled('p', {
 
   const Section = styled('section', {
     height: '70%',
-    background: '#EBF5FB',
+    background: '#EFEBE9',
     overflow: 'hidden',
     position: 'relative',
   });
-  
+
+  const Image = styled('img', {
+    width: isPortrait ? '100%' : '40%',
+  });
 
 const countdownBase: COUNTDOWNTYPE = {
   days: 0,
@@ -116,6 +119,7 @@ const Countdown =  ({ config }: GreetingProps) => {
             <br/>
             Nuestra Boda
           </SubTitle>
+          <Image src={config.galleryImages[3]} />
           <Watch>
             <NumberCard number={countdown.days} label="Dias" />
             <NumberCard number={countdown.hours} label="Horas" />
