@@ -37,15 +37,15 @@ const SubTitle = styled('p', {
 });
 const Image = styled('img', {
   width: '40%',
-
+  maxWidth: '4600px',
+  alignItems: 'center'
 });
-
 
 const Content = styled('div', {
   display: 'flex',
   height: '100%',
-  width: '80%',
-  maxHeight: '100px',
+  width: '100%',
+  maxHeight: '150px',
   alignContent: 'center',
   alignSelf: 'center'
 });
@@ -62,17 +62,11 @@ const Regalos = ({ config }: GreetingProps) => {
       <Layout>
         <Title>Mesa de regalos</Title>
         <Content>
-        <SubTitle>
-          Liverpool:  <a href='https://mesaderegalos.liverpool.com.mx/milistaderegalos/51136394'>51136394</a> 
-          <br/>
-        </SubTitle>
         <a href='https://mesaderegalos.liverpool.com.mx/milistaderegalos/51136394'>
           <Image src={config.galleryImages[2]} />
         </a>
         </Content>
         <Content>
-        <SubTitle>
-        </SubTitle>
         <a href='https://www.amazon.com.mx/wedding/lizeth-garcía-daniel-martinez-ciudad-de-meacutexico-may-2023/registry/7N9BZZDTTGCD'> 
         <Image src={config.galleryImages[1]}/>
         </a>

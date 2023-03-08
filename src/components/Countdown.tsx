@@ -2,7 +2,7 @@ import { styled } from "@stitches/react";
 import { memo, useEffect, useState } from "react";
 import { useRef } from 'react';
 import useOnScreen from '../hooks/useOnScreen';
-
+import { ConfigsType } from '../configs';
 
 const EVENT_DATE = "Mayo 27, 2023 04:30:00";
 const COUNTDOWN_DATE = new Date(EVENT_DATE).getTime();
@@ -69,7 +69,11 @@ const countdownBase: COUNTDOWNTYPE = {
   seconds: 0,
 };
 
-const Countdown = memo(() => {
+type GreetingProps = {
+  config: ConfigsType;
+};
+
+const Countdown =  ({ config }: GreetingProps) => {
   const ref = useRef<HTMLSelectElement>(null);
   const onScreen: boolean = useOnScreen<HTMLDivElement>(ref, '-125px');
   const [countdown, setCountdown] = useState<COUNTDOWNTYPE>(countdownBase);
@@ -124,7 +128,7 @@ const Countdown = memo(() => {
     
     
   );
-});
+};
 
 interface NumberCardProps {
   number: number;

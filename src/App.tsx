@@ -14,7 +14,7 @@ function App() {
       <Greeting config={Configs} />
       <Family config={Configs}/>
       <Location config={Configs} />
-      <Countdown/>
+      <Countdown config={Configs}/>
       <Confirmation config={Configs}/>
       <Regalos config={Configs}/>
     </main>
