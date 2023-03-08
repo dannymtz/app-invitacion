@@ -7,7 +7,7 @@ const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
   height: '100%',
-  background: '#DADADA',
+  background: '#673e23',
   overflow: 'hidden',
   position: 'relative',
 });
@@ -32,17 +32,24 @@ const ImageLayout = styled('div', {
 });
 
 const Title = styled('p', {
-  color: '#795548',
+  color: '#f6b08f',
   width: '100%',
   fontSize: isPortrait ? '2.5em' : '3.5em',
   margin: 0,
   fontWeight: '500',
 });
 
+const Texto = styled('p', {
+  color: '#c28a72',
+  width: '100%',
+  fontSize: '30px',//isPortrait ? '2.5em' : '3.5em',
+  margin: 0,
+  fontWeight: '500',
+});
 
 
 const SubTitle = styled('p', {
-  color: '#795548',
+  color: '#c28a72',
   width: '100%',
   fontSize: isPortrait ? '1.2em' : '2em',
   margin: '24px 0',
@@ -80,6 +87,9 @@ const Confirmation = ({ config }: GreetingProps) => {
     >
       <Section>
         <Layout>
+          <Texto>
+            Apreciable:
+          </Texto>
           <Title>{config.invite.find(e => e.id == index.value)?.familyName}</Title>
           <SubTitle>
             Número de pases: {config.invite.find(e => e.id == index.value)?.numberInvite}

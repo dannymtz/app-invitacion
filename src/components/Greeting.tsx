@@ -7,7 +7,7 @@ const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
   height: 'fit-content',
-  background: '#F4F6F6',
+  background: '#b7a394',
   overflow: 'hidden',
   position: 'relative',
 });
@@ -31,6 +31,18 @@ const SubTitle = styled('p', {
   margin: '24px 0',
   fontWeight: '300',
   lineHeight: 1.8,
+  fontFamily: 'system-ui'
+});
+
+const SubTitle2 = styled('p', {
+  color: '#9A673F',
+  width: '100%',
+  fontSize: '60px',//isPortrait ? '1.2em' : '2em',
+  margin: '24px 0',
+  fontWeight: '300',
+  lineHeight: 1.8,
+  background: '#091E27',
+  fontFamily: 'system-ui'
 });
 
 type GreetingProps = {
@@ -56,13 +68,10 @@ const Greeting = ({ config }: GreetingProps) => {
         <Layout>
           <SubTitle>
             Te invitamos a celebrar nuestra boda
-            <br />
           </SubTitle>
-          <SubTitle>            
+          <SubTitle2>            
             {config.weddingDate}
-            <br />
-            {config.weddingLocation}
-          </SubTitle>
+          </SubTitle2>
           <Image src={config.secondImage} />
         </Layout>
       </Section>

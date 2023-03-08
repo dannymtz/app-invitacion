@@ -47,9 +47,11 @@ const Family = ({ config }: FamilyProps) => {
       <Layout>
         <Title>Con la bendición de nuestros padres</Title>
         <SubTitle>
-            {config.groom.motherName} &amp; {config.groom.fatherName}
+            {config.bride.motherName} &amp; {config.bride.fatherName}
             <br/>
-            {config.bride.motherName}
+            Y
+            <br/>
+            {config.groom.motherName}
         </SubTitle>
       </Layout>
     </Section>

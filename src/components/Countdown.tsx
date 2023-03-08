@@ -37,7 +37,7 @@ const Layout = styled('div', {
 const SubTitle = styled('p', {
   color: '#795548',
   width: '100%',
-  fontSize: isPortrait ? '1.2em' : '2em',
+  fontSize:'50px', //isPortrait ? '1.2em' : '2em',
   margin: '24px 0',
   fontWeight: '300',
   lineHeight: 1.8,
@@ -112,9 +112,7 @@ const Countdown =  ({ config }: GreetingProps) => {
         <Section>
         <Layout>
           <SubTitle>
-            Cuenta regresiva
-            <br/>
-            Nuestra Boda
+            Solo faltan:
           </SubTitle>
           <Watch>
             <NumberCard number={countdown.days} label="Dias" />

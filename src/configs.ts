@@ -9,17 +9,17 @@ import GalleryPhoto6 from './resources/Gallery_Photo_6.png';
 
 const Configs: ConfigsType = {
   url: 'http://localhost:3000', 
-  weddingDate: '27 De Mayo 2023 a las 4:30 pm',
+  weddingDate: '27 | Mayo | 2023',
   weddingLocation: 'San Angel, Plaza Escenaria',
   groom: {
-    name: 'Liz',
-    fatherName: 'Ricardo Garcia',
-    motherName: 'Graciela Gayosso',
-  },
-  bride: {
     name: 'Dani',
     fatherName: '',
     motherName: 'Carmen Pascual',
+  },
+  bride: {
+    name: 'Liz',
+    fatherName: 'Ricardo Garcia',
+    motherName: 'Graciela Gayosso',
   },
   titleImage: TitleImage,
   secondImage: GalleryPhoto1,

@@ -6,38 +6,52 @@ import { ConfigsType } from '../configs';
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
-  height: '90%',
-  background: '#FDFEFE',
+  height: '100%',
+  background: '#b7a394',
+  overflow: 'hidden',
+  position: 'relative',
+});
+
+const Layout2 = styled('section', {
+  height: '100%',
+  background: '#FFF8F4',
   overflow: 'hidden',
   position: 'relative',
 });
 
 const Layout = styled('div', {
   width: '100%',
-  height: '20%',
+  height: '120%',
   color: '#5D4037',
   textAlign: 'center',
   marginTop: '3.5%',
   animation: 'fadein 2.5s',
+  maxHeight: '250px'
 });
 
 const TitleLayout = styled('p', {
   width: '100%',
-  fontSize: isPortrait ? '2.5em' : '3.5em',
+  fontSize:'50px',
   margin: 0,
   fontWeight: '500',
+  color: '#9A673F',
+  background:'#091E27',
+  fontFamily: 'system-ui'
+
 });
 
-const SubTitleLayout = styled('p', {
+const Subtitle2 = styled('p', {
   width: '100%',
-  fontSize: isPortrait ? '1.2em' : '2em',
-  margin: '24px 0',
-  fontWeight: '300',
+  fontSize:'95px',
+  margin: 0,
+  fontWeight: '500',
+  color: '#9A673F',
+  fontFamily: 'system-ui'
 });
 
 const ImageLayout = styled('div', {
   width: '100%',
-  background: '#FDFEFE',
+  background: '#b7a394',
   bottom: '-5px',
   textAlign: 'center',
   position: 'absolute',
@@ -61,7 +75,7 @@ const Title = ({ config }: TitleProps) => {
         height={height}
         numberOfPieces={300}
         gravity={0.2}
-        colors={['#FFCDD2', '#F8BBD0', '#D1C4E9']}
+        colors={['#091E27', '#F8BBD0', '#9A673F']}
         recycle={false}
         style={{ position: 'fixed' }}
       />
@@ -69,13 +83,15 @@ const Title = ({ config }: TitleProps) => {
         <Layout>
           <TitleLayout>
           ¡Nos casamos!
-          <br/>
-            {config.groom.name} &amp; {config.bride.name}
           </TitleLayout>
-        </Layout>
-        <ImageLayout>
+          <br/>
+          <Subtitle2>
+            {config.bride.name} &amp; {config.groom.name}
+          </Subtitle2>
+          <ImageLayout>
           <Image src={config.titleImage} alt="Wedding Invitation Title Picutre" />
         </ImageLayout>
+        </Layout> 
       </Section>
     </>
   );

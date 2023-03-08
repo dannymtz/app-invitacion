@@ -45,9 +45,27 @@ const Content = styled('div', {
   display: 'flex',
   height: '100%',
   width: '100%',
-  maxHeight: '150px',
+  maxHeight: '200px',
   alignContent: 'center',
   alignSelf: 'center'
+});
+
+const Content2 = styled('div', {
+  display: 'flex',
+  height: '100%',
+  width: '100%',
+  maxHeight: '250px',
+  alignContent: 'center',
+  alignSelf: 'center'
+
+});
+
+const Title2 = styled('p', {
+  color: '#795548',
+  width: '100%',
+  fontSize: '20px',//isPortrait ? '2.5em' : '3.5em',
+  margin: 0,
+  fontWeight: '500',
 });
 
 type GreetingProps = {
@@ -61,17 +79,17 @@ const Regalos = ({ config }: GreetingProps) => {
     <Section ref={ref}>
       <Layout>
         <Title>Mesa de regalos</Title>
+        <Title2>*Da clic en cada logo</Title2>
         <Content>
         <a href='https://mesaderegalos.liverpool.com.mx/milistaderegalos/51136394'>
           <Image src={config.galleryImages[2]} />
         </a>
         </Content>
-        <Content>
+        <Content2>
         <a href='https://www.amazon.com.mx/wedding/lizeth-garcía-daniel-martinez-ciudad-de-meacutexico-may-2023/registry/7N9BZZDTTGCD'> 
-        <Image src={config.galleryImages[1]}/>
+          <Image src={config.galleryImages[1]}/>
         </a>
-        </Content>
-        
+        </Content2>
       </Layout>
     </Section>
   );
