@@ -16,7 +16,7 @@ function App() {
       <Location config={Configs} />
       <Countdown/>
       <Confirmation config={Configs}/>
-      <Regalos/>
+      <Regalos config={Configs}/>
     </main>
   );
 }

@@ -5,7 +5,7 @@ import { ConfigsType } from '../configs';
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
-  background: '#CCDBE4',
+  background: 'White',
   overflow: 'hidden',
   position: 'relative',
 });
@@ -29,26 +29,55 @@ const Title = styled('p', {
 const SubTitle = styled('p', {
   color: '#795548',
   width: '100%',
+  verticalAlign: 'middle',
   fontSize: isPortrait ? '1.2em' : '2em',
-  margin: '24px 0',
+  margin: '30px 0',
   fontWeight: '300',
   lineHeight: 1.8,
 });
+const Image = styled('img', {
+  width: '40%',
 
-const Regalos = () => {
+});
+
+
+const Content = styled('div', {
+  display: 'flex',
+  height: '100%',
+  width: '80%',
+  maxHeight: '100px',
+  alignContent: 'center',
+  alignSelf: 'center'
+});
+
+type GreetingProps = {
+  config: ConfigsType;
+};
+
+const Regalos = ({ config }: GreetingProps) => {
   const ref = useRef<HTMLSelectElement>(null);
 
   return (
     <Section ref={ref}>
       <Layout>
         <Title>Mesa de regalos</Title>
+        <Content>
         <SubTitle>
-          Liverpool:  51136394
+          Liverpool:  <a href='https://mesaderegalos.liverpool.com.mx/milistaderegalos/51136394'>51136394</a> 
           <br/>
-          <p>
-            <a href='https://www.amazon.com.mx/'> Amazon </a> 
-          </p>
         </SubTitle>
+        <a href='https://mesaderegalos.liverpool.com.mx/milistaderegalos/51136394'>
+          <Image src={config.galleryImages[2]} />
+        </a>
+        </Content>
+        <Content>
+        <SubTitle>
+        </SubTitle>
+        <a href='https://www.amazon.com.mx/wedding/lizeth-garcía-daniel-martinez-ciudad-de-meacutexico-may-2023/registry/7N9BZZDTTGCD'> 
+        <Image src={config.galleryImages[1]}/>
+        </a>
+        </Content>
+        
       </Layout>
     </Section>
   );
