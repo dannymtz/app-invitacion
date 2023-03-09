@@ -5,7 +5,7 @@ import { ConfigsType } from '../configs';
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
-  background: '#DADADA',
+  background: 'b5855f',
   overflow: 'hidden',
   position: 'relative',
   maxHeight: '1000px',
@@ -20,35 +20,41 @@ const Layout = styled('div', {
 });
 
 const Title = styled('p', {
-  color: '#795548',
+  color: '#9A673F',
   width: '100%',
   fontSize:'50px', //isPortrait ? '2.5em' : '3.5em',
   margin: 0,
   fontWeight: '500',
+  fontFamily: 'system-ui',
+  letterSpacing: '5px',
 });
 
 const Title2 = styled('p', {
-  color: '#795548',
+  color: '#9A673F',
   width: '100%',
   fontSize: '40px',//isPortrait ? '2.5em' : '3.5em',
   margin: 0,
   fontWeight: '500',
+  fontFamily: 'system-ui'
 });
 
 const Title3 = styled('p', {
-    color: '#795548',
+    color: '#9A673F',
     width: '100%',
-    fontSize: '50px',//isPortrait ? '2.5em' : '3.5em',
+    fontSize: '40px',//isPortrait ? '2.5em' : '3.5em',
     margin: 0,
-    fontWeight: '500',
+    fontWeight: '300',
+    fontFamily: 'system-ui'
   });
 
   const Title4 = styled('p', {
-    color: '#795548',
+    color: '#9A673F',
     width: '100%',
     fontSize: '20px',//isPortrait ? '2.5em' : '3.5em',
     margin: 0,
     fontWeight: '500',
+    fontFamily: 'system-ui',
+  letterSpacing: '5px',
   });
 
 type GreetingProps = {
@@ -65,7 +71,7 @@ const Vestimenta = ({ config }: GreetingProps) => {
         <Title2>Formal</Title2>
         <br/>
         <Title3>Respetuosamente: NO niños</Title3>
-        <Title4>*Solo Constanza</Title4>
+        <Title4>*Sólo Constanza</Title4>
       </Layout>
     </Section>
   );

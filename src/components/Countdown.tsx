@@ -17,12 +17,16 @@ const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Box =  styled('div', {
   width: '100%',
-  color: '#5D4037',
+  color: '#9A673F',
   textAlign: 'center',
   justifyContent: "center",
   borderRadius:"1em",
   margin: '3.5%',
-  background: '#FDFEFE'
+  background: '#091E27',
+  fontFamily: 'system-ui',
+  fontWeight: '400',
+  fontSize:'40px'
+
 });
 
 const Layout = styled('div', {
@@ -31,20 +35,22 @@ const Layout = styled('div', {
   textAlign: 'center',
   marginTop: '3.5%',
   animation: 'fadein 2.5s',
-  background: '#EFEBE9'
+  background: '#b5855f'
 });
 
 const SubTitle = styled('p', {
-  color: '#795548',
+  color: '#673e23',
   width: '100%',
-  fontSize:'50px', //isPortrait ? '1.2em' : '2em',
+  fontSize:'60px', //isPortrait ? '1.2em' : '2em',
   margin: '24px 0',
-  fontWeight: '300',
+  fontWeight: '500',
   lineHeight: 1.8,
+  fontFamily: 'system-ui',
+  letterSpacing: '5px'
   });
 
   const Watch = styled('p', {
-    color: '#795548',
+    color: '#b5855f',
     width: '100%',
     fontSize: isPortrait ? '1.2em' : '2em',
     margin: '24px 0',
@@ -56,7 +62,7 @@ const SubTitle = styled('p', {
 
   const Section = styled('section', {
     height: '70%',
-    background: '#EFEBE9',
+    background: '#b5855f',
     overflow: 'hidden',
     position: 'relative',
   });
@@ -119,7 +125,7 @@ const Countdown =  ({ config }: GreetingProps) => {
           </SubTitle>
           <Image src={config.galleryImages[3]} />
           <Watch>
-            <NumberCard number={countdown.days} label="Dias" />
+            <NumberCard number={countdown.days} label="Días" />
             <NumberCard number={countdown.hours} label="Horas" />
             <NumberCard number={countdown.minutes} label="Minutos" />
             <NumberCard number={countdown.seconds} label="Segundos" />

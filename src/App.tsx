@@ -12,8 +12,8 @@ function App() {
   return (
     <main style={{ height: '100%' }}>
       <TitleLayout config={Configs} />
-      <Confirmation config={Configs}/> 
       <Greeting config={Configs} />
+      <Confirmation config={Configs}/> 
       <Countdown config={Configs}/>
       <Family config={Configs}/>
       <Location config={Configs} />

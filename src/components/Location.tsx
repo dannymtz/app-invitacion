@@ -5,7 +5,7 @@ import { ConfigsType } from '../configs';
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
-  background: '#EBF5FB',
+  background: '#673e23',
   overflow: 'hidden',
   position: 'relative',
 });
@@ -19,47 +19,58 @@ const Layout = styled('div', {
 });
 
 const Title = styled('p', {
-  color: '#795548',
+  color: '#c28a72',
   width: '100%',
   fontSize: isPortrait ? '2.5em' : '3.5em',
   margin: 0,
   fontWeight: '500',
+  fontFamily: 'system-ui',
+  letterSpacing: '5px'
 });
 
 const SubTitle = styled('p', {
-  color: '#795548',
+  color: '#c28a72',
   width: '100%',
   fontSize: isPortrait ? '1.2em' : '2em',
   margin: '24px 0',
   fontWeight: '300',
   lineHeight: 1.8,
+  fontFamily: 'system-ui'
 });
 
 const Hora = styled('p', {
-  color: '#795548',
-  width: '100%',
-  fontSize:'30px', //isPortrait ? '1.2em' : '2em',
+  color: '#9A673F',
+  width: '20%',
+  fontSize:'40px', //isPortrait ? '1.2em' : '2em',
   margin: '24px 0',
   fontWeight: '300',
   lineHeight: 1.8,
+  fontFamily: 'system-ui',
+  marginLeft:'600px',
+  background: '#091E27',
+  borderRadius:"1em",
 });
 
 const Title2 = styled('p', {
-  color: '#795548',
+  color: '#e6ceb4',
   width: '100%',
-  fontSize:'50px', //isPortrait ? '1.2em' : '2em',
+  fontSize:'40px', //isPortrait ? '1.2em' : '2em',
   margin: '24px 0',
-  fontWeight: '300',
+  fontWeight: '500',
   lineHeight: 1.8,
+  fontFamily: 'system-ui',
+  letterSpacing: '5px',
+  
 });
 
 const Direccion= styled('p', {
-  color: '#795548',
+  color: '#e6ceb4',
   width: '100%',
   fontSize:'30px', //isPortrait ? '1.2em' : '2em',
   margin: '24px 0',
   fontWeight: '300',
   lineHeight: 1.8,
+  fontFamily: 'system-ui'
 });
 
 

@@ -12,7 +12,7 @@ const Section = styled('section', {
 
 const Layout = styled('div', {
   width: '100%',
-  color: '#5D4037',
+  color: '#673e23',
   textAlign: 'center',
   marginTop: '3.5%',
   animation: 'fadein 2.5s',
@@ -21,18 +21,20 @@ const Layout = styled('div', {
 const Title = styled('p', {
   color: '#795548',
   width: '100%',
-  fontSize: isPortrait ? '2.5em' : '3.5em',
+  fontSize: '50px', //isPortrait ? '2.5em' : '3.5em',
   margin: 0,
   fontWeight: '500',
+  fontFamily: 'system-ui',
 });
 
 const SubTitle = styled('p', {
   color: '#795548',
   width: '100%',
-  fontSize: isPortrait ? '1.2em' : '2em',
+  fontSize: '50px', //isPortrait ? '1.2em' : '2em',
   margin: '24px 0',
   fontWeight: '300',
   lineHeight: 1.8,
+  fontFamily: 'system-ui',
 });
 
 type FamilyProps = {

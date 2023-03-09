@@ -7,7 +7,7 @@ const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
   height: '100%',
-  background: '#b7a394',
+  background: '#e6ceb4',
   overflow: 'hidden',
   position: 'relative',
 });
@@ -36,22 +36,24 @@ const TitleLayout = styled('p', {
   fontWeight: '500',
   color: '#9A673F',
   background:'#091E27',
-  fontFamily: 'system-ui'
+  fontFamily: 'system-ui',
+  letterSpacing: '5px'
 
 });
 
 const Subtitle2 = styled('p', {
   width: '100%',
-  fontSize:'95px',
+  fontSize:'100px',
   margin: 0,
-  fontWeight: '500',
-  color: '#9A673F',
-  fontFamily: 'system-ui'
+  fontWeight: '700',
+  color: '#673e23',
+  fontFamily: 'system-ui',
+  fontStyle: 'italic'
 });
 
 const ImageLayout = styled('div', {
   width: '100%',
-  background: '#b7a394',
+  background: '#e6ceb4',
   bottom: '-5px',
   textAlign: 'center',
   position: 'relative',

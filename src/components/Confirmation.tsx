@@ -17,7 +17,7 @@ const Section = styled('section', {
 
 const Layout = styled('div', {
   width: '100%',
-  color: '#5D4037',
+  color: '#763c31',
   textAlign: 'center',
   marginTop: '3.5%',
   animation: 'fadein 2.5s',
@@ -37,40 +37,68 @@ const ImageLayout = styled('div', {
 const Title = styled('p', {
   color: '#f6b08f',
   width: '100%',
-  fontSize: isPortrait ? '2.5em' : '3.5em',
+  fontSize:'70px',//isPortrait ? '2.5em' : '3.5em',
   margin: 0,
-  fontWeight: '500',
+  fontWeight: '600',
+  fontFamily: 'system-ui'
 });
 
 const Texto = styled('p', {
-  color: '#c28a72',
-  width: '100%',
-  fontSize: '30px',//isPortrait ? '2.5em' : '3.5em',
+  color: '#9A673F',
+  width: '60%',
+  fontSize: '40px',//isPortrait ? '2.5em' : '3.5em',
   margin: 0,
-  fontWeight: '500',
-});
-
-const Button =  styled('button', {
-  position:'relative',
-  backgroundColor: 'Green',
-  cursor: 'pointer',
-  width: '400px',
-  height: '100px',
-  color: 'White',
-  lineHeight: '100px',
-  textAlign: 'center',
+  fontWeight: '400',
+  fontFamily: 'system-ui',
+  letterspacing: '6px',
+  background:'#091E27',
+  marginLeft: '150px',
   borderRadius:"1em",
-  fontSize: '2em'
 });
 
 const SubTitle = styled('p', {
   color: '#c28a72',
   width: '100%',
-  fontSize: isPortrait ? '1.2em' : '2em',
-  margin: '24px 0',
-  fontWeight: '300',
-  lineHeight: 1.8,
+  fontSize: '40px', //isPortrait ? '1.2em' : '2em',
+  margin: '0',
+  fontWeight: '400',
+  //lineHeight: 1.8,
+  fontFamily: 'system-ui'
+
+
 });
+
+const SubTitle3 = styled('p', {
+  color: '#c28a72',
+  width: '100%',
+  fontSize: '50px', //isPortrait ? '1.2em' : '2em',
+  margin: '24px 0',
+  fontWeight: '400',
+  lineHeight: 1.8,
+  fontFamily: 'system-ui'
+});
+
+
+const Button =  styled('button', {
+  position:'relative',
+  backgroundColor: '#091E27',
+  cursor: 'pointer',
+  width: '200px',
+  height: '50px',
+  color: '#9A673F',
+  lineHeight: '6px',
+  textAlign: 'center',
+  borderRadius:"10px 30px",
+  fontSize: '2em',
+  border: '#091E27',
+  fontFamily: 'system-ui',
+  fontWeight: '600',
+  
+});
+
+
+
+
 
 type GreetingProps = {
   config: ConfigsType;
@@ -113,9 +141,14 @@ const Confirmation = ({ config }: GreetingProps) => {
           <SubTitle>
             Número de pases: {config.invite.find(e => e.id == index.value)?.numberInvite}
           </SubTitle>
-        </Layout>
+        
+        <SubTitle3>
+            Confirma tu asistencia:
+        </SubTitle3>
+
+          </Layout>
         <Button onClick={confirm} >
-          Confirmar
+        Con el novio
         </Button>
       </Section>
     </section>

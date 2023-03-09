@@ -5,7 +5,7 @@ import { ConfigsType } from '../configs';
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
-  background: 'White',
+  background: '#DADADA',
   overflow: 'hidden',
   position: 'relative',
 });
@@ -24,6 +24,8 @@ const Title = styled('p', {
   fontSize: isPortrait ? '2.5em' : '3.5em',
   margin: 0,
   fontWeight: '500',
+  fontFamily: 'system-ui',
+  letterSpacing: '5px',
 });
 
 const SubTitle = styled('p', {
@@ -34,6 +36,7 @@ const SubTitle = styled('p', {
   margin: '30px 0',
   fontWeight: '300',
   lineHeight: 1.8,
+  fontFamily: 'system-ui',
 });
 const Image = styled('img', {
   width: '40%',
@@ -65,7 +68,8 @@ const Title2 = styled('p', {
   width: '100%',
   fontSize: '20px',//isPortrait ? '2.5em' : '3.5em',
   margin: 0,
-  fontWeight: '500',
+  fontWeight: '400',
+  fontFamily: 'system-ui',
 });
 
 type GreetingProps = {

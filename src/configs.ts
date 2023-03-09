@@ -18,7 +18,7 @@ const Configs: ConfigsType = {
   },
   bride: {
     name: 'Liz',
-    fatherName: 'Ricardo Garcia',
+    fatherName: 'Ricardo García',
     motherName: 'Graciela Gayosso',
   },
   titleImage: TitleImage,

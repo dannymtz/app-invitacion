@@ -7,7 +7,7 @@ const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
   height: 'fit-content',
-  background: '#b7a394',
+  background: '#e6ceb4',
   overflow: 'hidden',
   position: 'relative',
 });
@@ -27,9 +27,9 @@ const Image = styled('img', {
 const SubTitle = styled('p', {
   color: '#795548',
   width: '100%',
-  fontSize: isPortrait ? '1.2em' : '2em',
+  fontSize: '60px',//isPortrait ? '1.2em' : '2em',
   margin: '24px 0',
-  fontWeight: '300',
+  fontWeight: '400',
   lineHeight: 1.8,
   fontFamily: 'system-ui'
 });
@@ -37,9 +37,9 @@ const SubTitle = styled('p', {
 const SubTitle2 = styled('p', {
   color: '#9A673F',
   width: '100%',
-  fontSize: '60px',//isPortrait ? '1.2em' : '2em',
+  fontSize: '80px',//isPortrait ? '1.2em' : '2em',
   margin: '24px 0',
-  fontWeight: '300',
+  fontWeight: '500',
   lineHeight: 1.8,
   background: '#091E27',
   fontFamily: 'system-ui'
