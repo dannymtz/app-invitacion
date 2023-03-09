@@ -6,8 +6,8 @@ import { ConfigsType } from '../configs';
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
-  height: '100%',
   background: '#e6ceb4',
+  height: isPortrait ? '60%' : '100%',
   overflow: 'hidden',
   position: 'relative',
 });
@@ -60,7 +60,7 @@ const ImageLayout = styled('div', {
 });
 
 const Image = styled('img', {
-  width: isPortrait ? '100%' : '40%',
+  width: isPortrait ? '100%' : '60%',
 });
 
 type TitleProps = {
