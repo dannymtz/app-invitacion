@@ -46,7 +46,7 @@ const SubTitle = styled('p', {
   const Watch = styled('p', {
     color: '#795548',
     width: '100%',
-    fontSize: isPortrait ? '1.2em' : '2em',
+    fontSize: isPortrait ? '3em' : '4em',
     margin: '24px 0',
     fontWeight: '300',
     lineHeight: 1.8,

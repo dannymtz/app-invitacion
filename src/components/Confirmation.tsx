@@ -1,6 +1,5 @@
-import { useRef } from 'react';
 import { styled } from '@stitches/react';
-import useOnScreen from '../hooks/useOnScreen';
+import { useRef } from 'react';
 import { ConfigsType } from '../configs';
 import queryString from 'query-string';
 
@@ -10,8 +9,7 @@ const Section = styled('section', {
   height: '100%',
   background: '#673e23',
   overflow: 'hidden',
-  position: 'relative',
-  display: 'grid',
+  display: 'block',
   justifyContent: 'center'
 });
 
@@ -22,17 +20,7 @@ const Layout = styled('div', {
   marginTop: '3.5%',
   animation: 'fadein 2.5s',
 });
-const Image = styled('img', {
-  width: isPortrait ? '100%' : '40%',
-});
 
-const ImageLayout = styled('div', {
-  width: '100%',
-  background: '#DADADA',
-  bottom: '-5px',
-  textAlign: 'center',
-  position: 'absolute',
-});
 
 const Title = styled('p', {
   color: '#f6b08f',
@@ -52,9 +40,9 @@ const Texto = styled('p', {
 
 const Button =  styled('button', {
   position:'relative',
-  backgroundColor: 'Green',
+  backgroundColor: '#091E27',
   cursor: 'pointer',
-  width: '400px',
+  width: '50%',
   height: '100px',
   color: 'White',
   lineHeight: '100px',
@@ -88,22 +76,17 @@ console.log(index.value);
 
 const Confirmation = ({ config }: GreetingProps) => { 
   const ref = useRef<HTMLSelectElement>(null);
-  const onScreen: boolean = useOnScreen<HTMLDivElement>(ref, '-125px');
   function confirm() {
     window.open(
       "https://wa.me/+525549164152?text=Confirmo%20mi%20asistencia", "_blank");
   }
+  function confirmLiz() {
+    window.open(
+      "https://wa.me/+525581079633?text=Confirmo%20mi%20asistencia", "_blank");
+  }
   return (
     <section
-      ref={ref}
-      style={{
-        height: '100$',
-        background: onScreen ? '#EFEBE9' : '#DADADA',
-        overflow: 'hidden',
-        position: 'relative',
-        transition: 'background 1s ease-in',
-      }}
-    >
+      ref={ref}>
       <Section>
         <Layout>
           <Texto>
@@ -114,8 +97,11 @@ const Confirmation = ({ config }: GreetingProps) => {
             Número de pases: {config.invite.find(e => e.id == index.value)?.numberInvite}
           </SubTitle>
         </Layout>
-        <Button onClick={confirm} >
-          Confirmar
+        <Button onClick={confirm}>
+          Confirmar a Dani
+        </Button>
+        <Button onClick={confirmLiz}>
+          Confirmar a Liz
         </Button>
       </Section>
     </section>

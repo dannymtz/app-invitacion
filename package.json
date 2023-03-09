@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
-    "@googlemaps/js-api-loader": "^1.15.1",
     "@stitches/react": "^1.2.8",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -15,7 +14,6 @@
     "@types/react-copy-to-clipboard": "^5.0.4",
     "@types/react-dom": "^18.0.6",
     "antd": "^4.23.0",
-    "google-map-react": "^2.2.0",
     "query-string": "^8.1.0",
     "react": "^18.2.0",
     "react-confetti": "^6.1.0",
@@ -50,8 +48,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/google-map-react": "^2.1.7"
   }
 }
