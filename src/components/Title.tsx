@@ -21,7 +21,7 @@ const Layout2 = styled('section', {
 
 const Layout = styled('div', {
   width: '100%',
-  height: '120%',
+  height: '100%',
   color: '#5D4037',
   textAlign: 'center',
   marginTop: '3.5%',
@@ -54,7 +54,7 @@ const ImageLayout = styled('div', {
   background: '#b7a394',
   bottom: '-5px',
   textAlign: 'center',
-  position: 'absolute',
+  position: 'relative',
 });
 
 const Image = styled('img', {
