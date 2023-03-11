@@ -33,13 +33,12 @@ const Title = styled('p', {
 
 const Texto = styled('p', {
   color: '#9A673F',
-  width: '60%',
-  fontSize: '40px',//isPortrait ? '2.5em' : '3.5em',
-  margin: 0,
+  fontSize: '40px',
+  marginLeft :'20%',
+  marginRight: '20%',
   fontFamily: 'system-ui',
   letterspacing: '6px',
   background:'#091E27',
-  marginLeft: '150px',
   fontWeight: '500',
 });
 
