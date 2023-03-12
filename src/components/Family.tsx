@@ -37,6 +37,24 @@ const SubTitle = styled('p', {
   fontFamily: 'system-ui',
 });
 
+const ImageNovio = styled('img', {
+  width: '5%',
+  maxWidth: '5%',
+  alignItems: 'center'
+});
+
+const ImageNovia = styled('img', {
+  width: '4%',
+  maxWidth: '4%',
+  alignItems: 'center'
+});
+
+const IconoNovio = styled('div', {
+  
+});
+
+
+
 type FamilyProps = {
   config: ConfigsType;
 };
@@ -49,10 +67,14 @@ const Family = ({ config }: FamilyProps) => {
       <Layout>
         <Title>Con la bendición de nuestros padres</Title>
         <SubTitle>
+            <IconoNovio>
+             <ImageNovia src={config.galleryImages[8]} />
+            </IconoNovio>
             {config.bride.motherName} &amp; {config.bride.fatherName}
-            <br/>
-            Y
-            <br/>
+            
+            <IconoNovio>
+             <ImageNovio src={config.galleryImages[7]} />
+            </IconoNovio>
             {config.groom.motherName}
         </SubTitle>
       </Layout>

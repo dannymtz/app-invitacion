@@ -72,6 +72,20 @@ const Title2 = styled('p', {
   fontFamily: 'system-ui',
 });
 
+
+
+const IconRegalo = styled('div', {
+  width: '10%',
+  height: '10%',
+  marginLeft: '45%',
+  //marginRight: '10%',
+  marginTop: '0%',
+});
+
+
+
+
+
 type GreetingProps = {
   config: ConfigsType;
 };
@@ -82,8 +96,13 @@ const Regalos = ({ config }: GreetingProps) => {
   return (
     <Section ref={ref}>
       <Layout>
+        <IconRegalo>
+          <Image src={config.galleryImages[5]} />
+        </IconRegalo>
+        
         <Title>Mesa de regalos</Title>
         <Title2>*Da clic en cada logo</Title2>
+        <br/>
         <Content>
         <a href='https://mesaderegalos.liverpool.com.mx/milistaderegalos/51136394'>
           <Image src={config.galleryImages[2]} />

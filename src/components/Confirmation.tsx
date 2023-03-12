@@ -10,7 +10,8 @@ const Section = styled('section', {
   background: '#673e23',
   overflow: 'hidden',
   display: 'block',
-  justifyContent: 'center'
+  justifyContent: 'center',
+ 
 });
 
 const Layout = styled('div', {
@@ -33,13 +34,12 @@ const Title = styled('p', {
 
 const Texto = styled('p', {
   color: '#9A673F',
-  width: '60%',
-  fontSize: '40px',//isPortrait ? '2.5em' : '3.5em',
+  width: '100%',
+  fontSize: isPortrait ? '2.5em' : '3.5em',
   margin: 0,
   fontFamily: 'system-ui',
-  letterspacing: '6px',
   background:'#091E27',
-  marginLeft: '150px',
+  //marginLeft: isPortrait ? '300px' : '300px',
   fontWeight: '500',
 });
 
@@ -72,7 +72,7 @@ const Button =  styled('button', {
   position:'relative',
   backgroundColor: '#091E27',
   cursor: 'pointer',
-  width: '50%',
+  width: '30%',
   height: '50px',
   color: '#9A673F',
   lineHeight: '6px',
@@ -85,6 +85,11 @@ const Button =  styled('button', {
   
 });
 
+const ImagePases = styled('img', {
+  width: '3%',
+  maxWidth: '3%',
+  alignItems: 'center'
+});
 
 
 
@@ -123,17 +128,20 @@ const Confirmation = ({ config }: GreetingProps) => {
           <Title>{config.invite.find(e => e.id == index.value)?.familyName}</Title>
           <SubTitle>
             Número de pases: {config.invite.find(e => e.id == index.value)?.numberInvite}
+            <ImagePases src={config.galleryImages[10]} />
           </SubTitle>
         
         <SubTitle3>
-            Confirma tu asistencia:
+            Confirma tu asistencia con:
         </SubTitle3>
         <Button onClick={confirm} >
-        Con el novio
+          El novio
         </Button>
         <Button onClick={confirmLiz}>
-          Con la novia
+          La novia
         </Button>
+        <br />
+        <br />
         </Layout>
       </Section>
     </section>
