@@ -12,6 +12,7 @@ import GalleryPhoto10 from './resources/Icono calendario.png';
 import GalleryPhoto11 from './resources/Icono Pases.png';
 import GalleryPhoto12 from './resources/Icono Smoking.png';
 import GalleryPhoto13 from './resources/Icono Vestido.png';
+import GalleryPhoto14 from './resources/vestimenta.jpeg';
 
 const Configs: ConfigsType = {
   url: 'http://localhost:3000', 
@@ -43,7 +44,8 @@ const Configs: ConfigsType = {
     GalleryPhoto10,
     GalleryPhoto11,
     GalleryPhoto12,
-    GalleryPhoto13
+    GalleryPhoto13,
+    GalleryPhoto14
   ],
   invite: [
      {

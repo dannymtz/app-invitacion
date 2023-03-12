@@ -2,7 +2,7 @@ import { styled } from '@stitches/react';
 import { useRef } from 'react';
 import { ConfigsType } from '../configs';
 import queryString from 'query-string';
-import "@fontsource/inter";
+
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
@@ -26,21 +26,22 @@ const Layout = styled('div', {
 const Title = styled('p', {
   color: '#f6b08f',
   width: '100%',
-  fontSize:'70px',
-  margin: 0,
+  fontSize:'80px',
+  margin: '24px',
   fontWeight: '600',
-  fontFamily: 'system-ui'
+  fontFamily: 'Great Vibes'
 });
 
 const Texto = styled('p', {
   color: '#9A673F',
   width: '100%',
-  fontSize: isPortrait ? '2.5em' : '3.5em',
+  fontSize: '50px',//isPortrait ? '2.5em' : '3.5em',
   margin: 0,
-  fontFamily: 'system-ui',
+  fontFamily: 'Roboto Serif',
   background:'#091E27',
   //marginLeft: isPortrait ? '300px' : '300px',
   fontWeight: '500',
+  letterSpacing: '5px'
 });
 
 
@@ -52,7 +53,7 @@ const SubTitle = styled('p', {
   margin: '0',
   fontWeight: '400',
   //lineHeight: 1.8,
-  fontFamily: 'system-ui'
+  fontFamily: 'Roboto Serif'
 
 
 });
@@ -64,7 +65,7 @@ const SubTitle3 = styled('p', {
   margin: '24px 0',
   fontWeight: '400',
   lineHeight: 1.8,
-  fontFamily: 'system-ui'
+  fontFamily: 'Roboto Serif'
 });
 
 
@@ -80,7 +81,7 @@ const Button =  styled('button', {
   borderRadius:"10px 30px",
   fontSize: '2em',
   border: '#091E27',
-  fontFamily: 'system-ui',
+  fontFamily: 'Roboto Serif',
   fontWeight: '600',
   
 });
@@ -127,7 +128,7 @@ const Confirmation = ({ config }: GreetingProps) => {
           </Texto>
           <Title>{config.invite.find(e => e.id == index.value)?.familyName}</Title>
           <SubTitle>
-            Número de pases: {config.invite.find(e => e.id == index.value)?.numberInvite}
+            No. de pases: {config.invite.find(e => e.id == index.value)?.numberInvite} adultos .  
             <ImagePases src={config.galleryImages[10]} />
           </SubTitle>
         

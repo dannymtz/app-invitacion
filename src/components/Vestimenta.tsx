@@ -8,7 +8,7 @@ const Section = styled('section', {
   background: 'b5855f',
   overflow: 'hidden',
   position: 'relative',
-  maxHeight: '1000px',
+  maxHeight: '200%',
 
 });
 
@@ -26,8 +26,8 @@ const Title = styled('p', {
   width: '100%',
   fontSize:'50px', //isPortrait ? '2.5em' : '3.5em',
   margin: 0,
-  fontWeight: '500',
-  fontFamily: 'system-ui',
+  fontWeight: '700',
+  fontFamily: 'Roboto Serif',
   letterSpacing: '5px',
 });
 
@@ -37,7 +37,7 @@ const Title2 = styled('p', {
   fontSize: '40px',//isPortrait ? '2.5em' : '3.5em',
   margin: 0,
   fontWeight: '500',
-  fontFamily: 'system-ui'
+  fontFamily: 'Roboto Serif'
 });
 
 const Title3 = styled('p', {
@@ -46,7 +46,7 @@ const Title3 = styled('p', {
     fontSize: '40px',//isPortrait ? '2.5em' : '3.5em',
     margin: 0,
     fontWeight: '300',
-    fontFamily: 'system-ui'
+    fontFamily: 'Roboto Serif'
   });
 
   const Title4 = styled('p', {
@@ -55,7 +55,7 @@ const Title3 = styled('p', {
     fontSize: '20px',//isPortrait ? '2.5em' : '3.5em',
     margin: 0,
     fontWeight: '500',
-    fontFamily: 'system-ui',
+    fontFamily: 'Roboto Serif',
     letterSpacing: '5px',
     
   });
@@ -77,6 +77,11 @@ const Title3 = styled('p', {
     alignItems: 'center'
   });
 
+  const Foto = styled('img', {
+    width: isPortrait ? '80%' : '40%',
+    height:isPortrait ? '80%' : '40%',
+  });
+
 type GreetingProps = {
   config: ConfigsType;
 };
@@ -87,6 +92,7 @@ const Vestimenta = ({ config }: GreetingProps) => {
   return (
     <Section ref={ref}>
       <Layout>
+        <Foto src={config.galleryImages[13]}/>        
         <Title>Código de Vestimenta</Title>
         <Title2>Formal</Title2>
         <IconosVestimenta>

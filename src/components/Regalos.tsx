@@ -23,8 +23,8 @@ const Title = styled('p', {
   width: '100%',
   fontSize: isPortrait ? '2.5em' : '3.5em',
   margin: 0,
-  fontWeight: '500',
-  fontFamily: 'system-ui',
+  fontWeight: '700',
+  fontFamily: 'Roboto Serif',
   letterSpacing: '5px',
 });
 
@@ -36,7 +36,7 @@ const SubTitle = styled('p', {
   margin: '30px 0',
   fontWeight: '300',
   lineHeight: 1.8,
-  fontFamily: 'system-ui',
+  fontFamily: 'Roboto Serif',
 });
 const Image = styled('img', {
   width: '40%',
@@ -69,7 +69,7 @@ const Title2 = styled('p', {
   fontSize: '20px',//isPortrait ? '2.5em' : '3.5em',
   margin: 0,
   fontWeight: '400',
-  fontFamily: 'system-ui',
+  fontFamily: 'Roboto Serif',
 });
 
 

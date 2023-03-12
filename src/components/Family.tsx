@@ -23,8 +23,8 @@ const Title = styled('p', {
   width: '100%',
   fontSize: '50px', //isPortrait ? '2.5em' : '3.5em',
   margin: 0,
-  fontWeight: '500',
-  fontFamily: 'system-ui',
+  fontWeight: '700',
+  fontFamily: 'Roboto Serif',
 });
 
 const SubTitle = styled('p', {
@@ -32,9 +32,9 @@ const SubTitle = styled('p', {
   width: '100%',
   fontSize: '50px', //isPortrait ? '1.2em' : '2em',
   margin: '24px 0',
-  fontWeight: '300',
+  fontWeight: '500',
   lineHeight: 1.8,
-  fontFamily: 'system-ui',
+  fontFamily: 'Great Vibes',
 });
 
 const ImageNovio = styled('img', {

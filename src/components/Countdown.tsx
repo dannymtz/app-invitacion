@@ -23,9 +23,9 @@ const Box =  styled('div', {
   borderRadius:"1em",
   margin: '3.5%',
   background: '#091E27',
-  fontFamily: 'system-ui',
+  fontFamily: 'Roboto Serif',
   fontWeight: '400',
-  fontSize:'40px'
+  fontSize:'35px'
 
 });
 
@@ -41,11 +41,11 @@ const Layout = styled('div', {
 const SubTitle = styled('p', {
   color: '#673e23',
   width: '100%',
-  fontSize:'60px', //isPortrait ? '1.2em' : '2em',
+  fontSize:'50px', //isPortrait ? '1.2em' : '2em',
   margin: '24px 0',
   fontWeight: '500',
   lineHeight: 1.8,
-  fontFamily: 'system-ui',
+  fontFamily: 'Roboto Serif',
   letterSpacing: '5px'
   });
 
@@ -68,7 +68,7 @@ const SubTitle = styled('p', {
   });
 
   const Image = styled('img', {
-    width: isPortrait ? '100%' : '50%',
+    width: isPortrait ? '100%' : '60%',
   });
 
 
@@ -122,7 +122,7 @@ const Countdown =  ({ config }: GreetingProps) => {
         <Section>
         <Layout>
           <SubTitle>
-            Solo faltan:
+            Sólo faltan:
           </SubTitle>
           <Image src={config.galleryImages[3]} />
           <Watch>

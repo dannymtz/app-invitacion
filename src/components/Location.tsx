@@ -23,8 +23,8 @@ const Title = styled('p', {
   width: '100%',
   fontSize: isPortrait ? '2.5em' : '3.5em',
   margin: 0,
-  fontWeight: '500',
-  fontFamily: 'system-ui',
+  fontWeight: '800',
+  fontFamily: 'Roboto Serif',
   letterSpacing: '5px'
 });
 
@@ -35,16 +35,16 @@ const SubTitle = styled('p', {
   margin: '24px 0',
   fontWeight: '300',
   lineHeight: 1.8,
-  fontFamily: 'system-ui'
+  fontFamily: 'Roboto Serif'
 });
 
 const Hora = styled('p', {
   color: '#9A673F',
   width: '20%',
   fontSize:'40px', //isPortrait ? '40px' : '40px',
-  fontWeight: '300',
+  fontWeight: '900',
   lineHeight: 1.8,
-  fontFamily: 'system-ui',
+  fontFamily: 'Roboto Serif',
   marginLeft: '40%',
   marginRight: '40%',
   marginTop: '5%',
@@ -59,7 +59,7 @@ const Title2 = styled('p', {
   margin: '24px 0',
   fontWeight: '500',
   lineHeight: 1.8,
-  fontFamily: 'system-ui',
+  fontFamily: 'Roboto Serif',
   letterSpacing: '5px',
   
 });
@@ -71,7 +71,7 @@ const Direccion= styled('p', {
   margin: '0',
   fontWeight: '300',
   lineHeight: 1.8,
-  fontFamily: 'system-ui'
+  fontFamily: 'Roboto Serif'
 });
 const IconoCopas = styled('div', {
   width: '10%',
@@ -121,7 +121,7 @@ const Location = ({ config }: LocationProps) => {
           <br />
           Loreto y Campamento,Álvaro Obregón,
           <br />
-          01090 Ciudad de México, CDMX
+          01090 Ciudad de México.
           <br/>
         </Direccion>
         <SubTitle>
