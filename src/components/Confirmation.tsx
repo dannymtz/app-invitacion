@@ -128,7 +128,7 @@ const Confirmation = ({ config }: GreetingProps) => {
           </Texto>
           <Title>{config.invite.find(e => e.id == index.value)?.familyName}</Title>
           <SubTitle>
-            No. de pases: {config.invite.find(e => e.id == index.value)?.numberInvite} adultos .  
+            No. de pases: {config.invite.find(e => e.id == index.value)?.numberInvite}.   
             <ImagePases src={config.galleryImages[10]} />
           </SubTitle>
         
