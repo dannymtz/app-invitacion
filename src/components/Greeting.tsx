@@ -45,6 +45,28 @@ const SubTitle2 = styled('p', {
   fontFamily: 'system-ui'
 });
 
+const SubTitle3 = styled('p', {
+  color: '#795548',
+  width: '100%',
+  fontSize: '60px',//isPortrait ? '1.2em' : '2em',
+  margin: '24px 0',
+  fontWeight: '400',
+  lineHeight: 1.8,
+  fontFamily: 'system-ui',
+  letterSpacing: '5px'
+});
+
+const Image2 = styled('img', {
+  width: '3%',
+  height: '3%',
+});
+
+const IconoCalendario = styled('div', {
+
+});
+
+
+
 type GreetingProps = {
   config: ConfigsType;
 };
@@ -66,13 +88,21 @@ const Greeting = ({ config }: GreetingProps) => {
     >
       <Section>
         <Layout>
+
+        <IconoCalendario>
+            <Image2 src={config.galleryImages[9]} />
+          </IconoCalendario>
           <SubTitle>
             Te invitamos a celebrar nuestra boda
           </SubTitle>
+          <SubTitle3>
+            SÁBADO
+          </SubTitle3>
           <SubTitle2>            
             {config.weddingDate}
           </SubTitle2>
           <Image src={config.secondImage} />
+          
         </Layout>
       </Section>
     </section>

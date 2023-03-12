@@ -9,6 +9,7 @@ const Section = styled('section', {
   overflow: 'hidden',
   position: 'relative',
   maxHeight: '1000px',
+
 });
 
 const Layout = styled('div', {
@@ -17,6 +18,7 @@ const Layout = styled('div', {
   textAlign: 'center',
   marginTop: '3.5%',
   animation: 'fadein 2.5s',
+  
 });
 
 const Title = styled('p', {
@@ -54,7 +56,25 @@ const Title3 = styled('p', {
     margin: 0,
     fontWeight: '500',
     fontFamily: 'system-ui',
-  letterSpacing: '5px',
+    letterSpacing: '5px',
+    
+  });
+
+
+  const IconosVestimenta = styled('div', {
+
+  });
+
+  const ImageSmoking = styled('img', {
+    width: '5%',
+    maxWidth: '5%',
+    alignItems: 'center'
+  });
+
+  const ImageVestido= styled('img', {
+    width: '5%',
+    maxWidth: '5%',
+    alignItems: 'center'
   });
 
 type GreetingProps = {
@@ -69,9 +89,15 @@ const Vestimenta = ({ config }: GreetingProps) => {
       <Layout>
         <Title>Código de Vestimenta</Title>
         <Title2>Formal</Title2>
+        <IconosVestimenta>
+          <ImageSmoking src={config.galleryImages[11]} />
+          <ImageVestido src={config.galleryImages[12]} />
+        </IconosVestimenta>
         <br/>
         <Title3>Respetuosamente: NO niños</Title3>
         <Title4>*Sólo Constanza</Title4>
+        <br />
+        
       </Layout>
     </Section>
   );

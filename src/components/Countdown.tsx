@@ -68,8 +68,9 @@ const SubTitle = styled('p', {
   });
 
   const Image = styled('img', {
-    width: isPortrait ? '100%' : '40%',
+    width: isPortrait ? '100%' : '50%',
   });
+
 
 const countdownBase: COUNTDOWNTYPE = {
   days: 0,

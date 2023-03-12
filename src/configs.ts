@@ -1,11 +1,17 @@
 import TitleImage from './resources/Title.jpeg';
 import GalleryPhoto1 from './resources/Gallery_Photo_1.jpeg';
 import GalleryPhoto2 from './resources/amazon.png';
-import GalleryPhoto3 from './resources/liverpool-logo.jpg';
+import GalleryPhoto3 from './resources/liverpool.png';
 import GalleryPhoto4 from './resources/Gallery_Photo_4.jpeg';
 import GalleryPhoto5 from './resources/Gallery_Photo_5.png';
 import GalleryPhoto6 from './resources/Gallery_Photo_6.png';
-
+import GalleryPhoto7 from './resources/Icono location.png';
+import GalleryPhoto8 from './resources/Icono Novio.png';
+import GalleryPhoto9 from './resources/Icono Novia.png';
+import GalleryPhoto10 from './resources/Icono calendario.png';
+import GalleryPhoto11 from './resources/Icono Pases.png';
+import GalleryPhoto12 from './resources/Icono Smoking.png';
+import GalleryPhoto13 from './resources/Icono Vestido.png';
 
 const Configs: ConfigsType = {
   url: 'http://localhost:3000', 
@@ -31,6 +37,13 @@ const Configs: ConfigsType = {
     GalleryPhoto4,
     GalleryPhoto5,
     GalleryPhoto6,
+    GalleryPhoto7,
+    GalleryPhoto8,
+    GalleryPhoto9,
+    GalleryPhoto10,
+    GalleryPhoto11,
+    GalleryPhoto12,
+    GalleryPhoto13
   ],
   invite: [
      {
