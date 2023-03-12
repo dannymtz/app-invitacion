@@ -2,7 +2,7 @@ import { styled } from '@stitches/react';
 import { useRef } from 'react';
 import { ConfigsType } from '../configs';
 import queryString from 'query-string';
-
+import "@fontsource/inter";
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
@@ -25,7 +25,7 @@ const Layout = styled('div', {
 const Title = styled('p', {
   color: '#f6b08f',
   width: '100%',
-  fontSize:'70px',//isPortrait ? '2.5em' : '3.5em',
+  fontSize:'70px',
   margin: 0,
   fontWeight: '600',
   fontFamily: 'system-ui'
@@ -36,7 +36,7 @@ const Texto = styled('p', {
   fontSize: '40px',
   marginLeft :'20%',
   marginRight: '20%',
-  fontFamily: 'system-ui',
+  fontFamily: 'Raleway',
   letterspacing: '6px',
   background:'#091E27',
   fontWeight: '500',
