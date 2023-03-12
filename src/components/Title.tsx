@@ -3,6 +3,7 @@ import Confetti from 'react-confetti';
 import { useWindowSize } from 'react-use';
 import { ConfigsType } from '../configs';
 
+
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
@@ -12,16 +13,10 @@ const Section = styled('section', {
   position: 'relative',
 });
 
-const Layout2 = styled('section', {
-  height: '100%',
-  background: '#FFF8F4',
-  overflow: 'hidden',
-  position: 'relative',
-});
 
 const Layout = styled('div', {
   width: '100%',
-  height: '100%',
+  height: isPortrait ? '60%' : '100%',
   color: '#5D4037',
   textAlign: 'center',
   marginTop: '3.5%',
@@ -47,12 +42,12 @@ const Subtitle2 = styled('p', {
   margin: 0,
   fontWeight: '700',
   color: '#673e23',
-  fontFamily: 'system-ui',
-  fontStyle: 'italic'
+  fontFamily: 'Rubik Iso'
 });
 
 const ImageLayout = styled('div', {
-  width: '100%',
+  width: isPortrait ? '100%' : '100%',
+  height: isPortrait ? '60%' : '100%',
   background: '#e6ceb4',
   bottom: '-5px',
   textAlign: 'center',
@@ -60,7 +55,8 @@ const ImageLayout = styled('div', {
 });
 
 const Image = styled('img', {
-  width: isPortrait ? '100%' : '60%',
+  width: isPortrait ? '100%' : '50%',
+  
 });
 
 type TitleProps = {
