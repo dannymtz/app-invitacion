@@ -30,7 +30,7 @@ const Title = styled('p', {
 const SubTitle = styled('p', {
   color: '#795548',
   width: '100%',
-  fontSize: '50px', //isPortrait ? '1.2em' : '2em',
+  fontSize: '60px', //isPortrait ? '1.2em' : '2em',
   margin: '24px 0',
   fontWeight: '500',
   lineHeight: 1.8,
@@ -38,14 +38,14 @@ const SubTitle = styled('p', {
 });
 
 const ImageNovio = styled('img', {
-  width: '5%',
-  maxWidth: '5%',
+  width: '8%',
+  maxWidth: '8%',
   alignItems: 'center'
 });
 
 const ImageNovia = styled('img', {
-  width: '4%',
-  maxWidth: '4%',
+  width: '8%',
+  maxWidth: '8%',
   alignItems: 'center'
 });
 

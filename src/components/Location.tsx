@@ -40,13 +40,13 @@ const SubTitle = styled('p', {
 
 const Hora = styled('p', {
   color: '#9A673F',
-  width: '20%',
-  fontSize:'40px', //isPortrait ? '40px' : '40px',
+  width: '30%',
+  fontSize:'50px', //isPortrait ? '40px' : '40px',
   fontWeight: '900',
   lineHeight: 1.8,
   fontFamily: 'Roboto Serif',
-  marginLeft: '40%',
-  marginRight: '40%',
+  marginLeft: '35%',
+  marginRight: '30%',
   marginTop: '5%',
   background: '#091E27',
   borderRadius:"1em",
@@ -55,7 +55,7 @@ const Hora = styled('p', {
 const Title2 = styled('p', {
   color: '#e6ceb4',
   width: '100%',
-  fontSize:'40px', //isPortrait ? '1.2em' : '2em',
+  fontSize:'50px', //isPortrait ? '1.2em' : '2em',
   margin: '24px 0',
   fontWeight: '500',
   lineHeight: 1.8,
@@ -74,11 +74,7 @@ const Direccion= styled('p', {
   fontFamily: 'Roboto Serif'
 });
 const IconoCopas = styled('div', {
-  width: '10%',
-  height: '10%',
-  marginLeft: '45%',
-  //marginRight: '10%',
-  marginTop: '0%',
+  
 });
 
 const Mapa = styled('div', {
@@ -96,8 +92,14 @@ const Image = styled('img', {
 });
 
 const Image2 = styled('img', {
-  width: '4%',
-  maxWidth: '4%',
+  width: '10%',
+  maxWidth: '10%',
+  alignItems: 'center'
+});
+
+const Image3 = styled('img', {
+  width: '10%',
+  maxWidth: '10%',
   alignItems: 'center'
 });
 
@@ -107,7 +109,7 @@ const Location = ({ config }: LocationProps) => {
     <Section ref={ref}>
       <Layout>
         <IconoCopas>
-         <Image src={config.galleryImages[4]} />
+         <Image3 src={config.galleryImages[4]} />
         </IconoCopas>
 
         <Title>Ceremonia y Recepción</Title>

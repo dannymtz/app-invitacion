@@ -57,8 +57,8 @@ const SubTitle3 = styled('p', {
 });
 
 const Image2 = styled('img', {
-  width: '3%',
-  height: '3%',
+  width: '10%',
+  height: '10%',
 });
 
 const IconoCalendario = styled('div', {

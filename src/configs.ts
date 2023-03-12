@@ -59,7 +59,7 @@ const Configs: ConfigsType = {
       id: 5737665243      
     },
     {
-      familyName: "Familia Blanco Gutierrez",
+      familyName: "Familia Blanco Gutiérrez",
       numberInvite :2,
       id: 7820230051
     },
@@ -70,7 +70,7 @@ const Configs: ConfigsType = {
     },
     {
       familyName: "Alejandro Sánchez",
-      numberInvite :2,
+      numberInvite :1,
       id: 1229194065
     },
     {
@@ -94,7 +94,7 @@ const Configs: ConfigsType = {
       id: 4165161219      
     },
     {
-      familyName: "Garcia Gonzáles",
+      familyName: "Familia García Gonzáles",
       numberInvite :2,
       id: 6367529898
     },
@@ -105,13 +105,18 @@ const Configs: ConfigsType = {
     },
     {
       familyName: "Karla Herrera",
-      numberInvite :2,
+      numberInvite :1,
       id: 7189474670
     },
     {
       familyName: "Mauricio Sánchez",
-      numberInvite :2,
+      numberInvite :1,
       id: 6407310983      
+    },
+    {
+      familyName: "Edith Galloso",
+      numberInvite :1,
+      id: 6407310483      
     }
   ],
 };

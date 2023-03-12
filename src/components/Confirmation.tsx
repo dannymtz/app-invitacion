@@ -87,8 +87,8 @@ const Button =  styled('button', {
 });
 
 const ImagePases = styled('img', {
-  width: '3%',
-  maxWidth: '3%',
+  width: '8%',
+  maxWidth: '8%',
   alignItems: 'center'
 });
 

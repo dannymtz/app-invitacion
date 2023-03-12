@@ -75,11 +75,13 @@ const Title2 = styled('p', {
 
 
 const IconRegalo = styled('div', {
+  
+});
+
+const Image2 = styled('img', {
   width: '10%',
   height: '10%',
-  marginLeft: '45%',
-  //marginRight: '10%',
-  marginTop: '0%',
+  alignItems: 'center'
 });
 
 
@@ -97,7 +99,7 @@ const Regalos = ({ config }: GreetingProps) => {
     <Section ref={ref}>
       <Layout>
         <IconRegalo>
-          <Image src={config.galleryImages[5]} />
+          <Image2 src={config.galleryImages[5]} />
         </IconRegalo>
         
         <Title>Mesa de regalos</Title>

@@ -8,7 +8,7 @@ const Section = styled('section', {
   background: 'b5855f',
   overflow: 'hidden',
   position: 'relative',
-  maxHeight: '200%',
+  maxHeight: '250%',
 
 });
 
@@ -66,14 +66,14 @@ const Title3 = styled('p', {
   });
 
   const ImageSmoking = styled('img', {
-    width: '5%',
-    maxWidth: '5%',
+    width: '10%',
+    maxWidth: '10%',
     alignItems: 'center'
   });
 
   const ImageVestido= styled('img', {
-    width: '5%',
-    maxWidth: '5%',
+    width: '10%',
+    maxWidth: '10%',
     alignItems: 'center'
   });
 
